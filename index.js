@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "Application mainframe running" });
 });
 
-app.listen(PORT, (error) => {
+app.listen(process.env.PORT || PORT, (error) => {
   if (!error) console.log("Server is running 🚀");
   else console.log("Error occurred, server can't start", error);
 });
